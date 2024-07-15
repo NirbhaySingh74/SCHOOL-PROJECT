@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const VisionMission = () => {
+  const [missionStatement, setMissionStatement] = useState("");
   const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    // Fetch mission statement from backend
+    axios
+      .get("http://localhost:5000/mission")
+      .then((response) => {
+        setMissionStatement(response.data.missionStatement);
+      })
+      .catch((error) => {
+        console.error("Error fetching mission statement:", error);
+      });
+  }, []);
 
   const toggleExpansion = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <div className="w-full my-4 bg-white shadow-md rounded-lg overflow-hidden mb-4">
+    <div className="w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2 text-center">
+        <div className="font-bold text-xl mb-2">
           The Vision-Mission Statement of the Teachers
         </div>
         <p
@@ -18,14 +32,7 @@ const VisionMission = () => {
             expanded ? "block" : "truncate"
           }`}
         >
-          Our positive mission is to combat the roots of societal issues by
-          addressing illiteracy, which is often considered the creator of all
-          evils. We are dedicated to achieving this goal by imparting
-          qualitative, logical, and value-based modern education. Our vision
-          aligns with nurturing liberal rational humanism, empathy, and
-          togetherness in the new generations, fostering a community that values
-          education and understands the importance of shared humanity for an
-          honest prosperity of both mind and matter.
+          {missionStatement}
         </p>
       </div>
       <div className="px-6 py-4">

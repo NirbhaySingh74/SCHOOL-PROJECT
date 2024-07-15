@@ -7,7 +7,8 @@ dotenv.config();
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.json());
-// Define your mission statement text
+
+// Define mission statement text
 const missionStatement = `Our positive mission is to combat the roots of societal issues by
 addressing illiteracy, which is often considered the creator of all
 evils. We are dedicated to achieving this goal by imparting qualitative,
