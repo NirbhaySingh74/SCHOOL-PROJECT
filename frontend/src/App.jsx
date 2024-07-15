@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutProfessor from "./components/AboutProfessior";
+import AdmissionProcess from "./components/AdmissionProcess";
 import BannerImage from "./components/BannerImage";
 import Header from "./components/Header";
 import VisionMission from "./components/VisionMission";
@@ -12,6 +13,7 @@ function App() {
         <BannerImage />
         <AboutProfessor />
         <VisionMission />
+        <AdmissionProcess />
       </div>
     </>
   );
