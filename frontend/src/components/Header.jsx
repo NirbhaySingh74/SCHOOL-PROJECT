@@ -24,7 +24,7 @@ const Header = () => {
         <nav
           className={`md:flex space-x-8 ${
             isOpen ? "block" : "hidden"
-          } absolute top-16 left-0 w-full bg-black md:bg-blue-900 md:static md:w-auto md:space-x-8`}
+          } absolute top-16 right-0 w- bg-black md:bg-blue-900 md:static md:w-auto md:space-x-8 z-30`}
         >
           <div className="flex flex-col items-center md:flex-row md:space-x-8 md:items-center">
             <a
