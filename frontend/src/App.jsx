@@ -2,6 +2,7 @@ import "./App.css";
 import AboutProfessor from "./components/AboutProfessior";
 import AdmissionProcess from "./components/AdmissionProcess";
 import BannerImage from "./components/BannerImage";
+import Footer from "./components/Footer";
 import Gallary from "./components/Gallary";
 import Header from "./components/Header";
 import Notice from "./components/Notice";
@@ -19,6 +20,7 @@ function App() {
         <Gallary />
         <Notice />
       </div>
+      <Footer />
     </>
   );
 }
