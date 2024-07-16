@@ -4,17 +4,19 @@ import axios from "axios";
 const VisionMission = () => {
   const [missionStatement, setMissionStatement] = useState("");
   const [expanded, setExpanded] = useState(false);
+  const getMissionText = async () => {
+    // Fetch mission statement from backend
+
+    try {
+      const getText = await axios.get("/api/mission");
+      setMissionStatement(getText.data.missionStatement);
+    } catch (error) {
+      console.error("Error fetching mission statement:", error);
+    }
+  };
 
   useEffect(() => {
-    // Fetch mission statement from backend
-    axios
-      .get("/api/mission")
-      .then((response) => {
-        setMissionStatement(response.data.missionStatement);
-      })
-      .catch((error) => {
-        console.error("Error fetching mission statement:", error);
-      });
+    getMissionText();
   }, []);
 
   const toggleExpansion = () => {
@@ -22,7 +24,7 @@ const VisionMission = () => {
   };
 
   return (
-    <div className="w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
+    <div className="w-full bg-gray-300 shadow-md rounded-lg overflow-hidden my-4">
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">
           The Vision-Mission Statement of the Teachers

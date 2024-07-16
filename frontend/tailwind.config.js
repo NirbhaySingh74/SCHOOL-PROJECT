@@ -32,7 +32,7 @@ export default {
       animation: {
         "fade-in-down": "fade-in-down 0.5s ease-out",
         "fade-in-up": "fade-in-up 0.5s ease-out",
-        slideUp: "slideUp 12s linear infinite",
+        slideUp: "slideUp 8s linear infinite",
       },
     },
   },

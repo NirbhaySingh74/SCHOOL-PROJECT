@@ -7,7 +7,7 @@ import roomImg from "../assets/room.jpeg";
 
 const Gallary = () => {
   return (
-    <div className="flex flex-col items-center p-6 bg-gray-300 my-3">
+    <div className="flex flex-col items-center p-6 bg-gray-300 my-3 rounded-lg">
       {/* <h2 className="text-3xl font-bold mb-4">Gallery</h2> */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 cursor-pointer">
         <div className="relative">

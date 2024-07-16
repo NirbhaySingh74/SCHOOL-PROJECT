@@ -7,9 +7,13 @@ const AdmissionProcess = () => {
   const [admissionText, setAdmissionText] = useState("");
 
   const getAdmissionText = async () => {
-    const getText = await axios.get("/api/admissiontext");
-    console.log(getText.data.admissionProcessText);
-    setAdmissionText(getText.data.admissionProcessText);
+    try {
+      const getText = await axios.get("/api/admissiontext");
+      // console.log(getText.data.admissionProcessText);
+      setAdmissionText(getText.data.admissionProcessText);
+    } catch (error) {
+      console.log("Error in fetching admissionprocessText", error);
+    }
   };
 
   useEffect(() => {
@@ -17,7 +21,7 @@ const AdmissionProcess = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center p-6 py-3 bg-gray-300">
+    <div className="flex flex-col items-center p-6 my-3 bg-gray-300 rounded-lg">
       <h2 className="text-3xl font-bold mb-4">Admission Process</h2>
       <p className="text-center mb-6">{admissionText}</p>
       <div className="flex justify-center space-x-4">

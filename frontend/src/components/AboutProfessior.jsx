@@ -3,7 +3,7 @@ import professorImg from "../assets/professorGroupPic.webp";
 const AboutProfessor = () => {
   return (
     <div
-      className="relative w-full overflow-hidden md:px-4"
+      className="relative w-full overflow-hidden md:px-4 rounded-lg"
       style={{ height: "40vh" }}
     >
       <img

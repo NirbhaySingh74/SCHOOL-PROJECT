@@ -16,7 +16,7 @@ const Notice = () => {
         const [first, ...rest] = prevNotices;
         return [...rest, first];
       });
-    }, 12000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
