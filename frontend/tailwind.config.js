@@ -24,10 +24,15 @@ export default {
             transform: "translateY(0)",
           },
         },
+        slideUp: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
       },
       animation: {
         "fade-in-down": "fade-in-down 0.5s ease-out",
         "fade-in-up": "fade-in-up 0.5s ease-out",
+        slideUp: "slideUp 12s linear infinite",
       },
     },
   },

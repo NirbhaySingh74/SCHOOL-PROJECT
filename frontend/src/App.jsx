@@ -4,6 +4,7 @@ import AdmissionProcess from "./components/AdmissionProcess";
 import BannerImage from "./components/BannerImage";
 import Gallary from "./components/Gallary";
 import Header from "./components/Header";
+import Notice from "./components/Notice";
 import VisionMission from "./components/VisionMission";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <VisionMission />
         <AdmissionProcess />
         <Gallary />
+        <Notice />
       </div>
     </>
   );
