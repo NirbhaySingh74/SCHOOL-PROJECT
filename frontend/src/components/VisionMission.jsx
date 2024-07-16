@@ -8,7 +8,7 @@ const VisionMission = () => {
   useEffect(() => {
     // Fetch mission statement from backend
     axios
-      .get("http://localhost:5000/mission")
+      .get("/api/mission")
       .then((response) => {
         setMissionStatement(response.data.missionStatement);
       })

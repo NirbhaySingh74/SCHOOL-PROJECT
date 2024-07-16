@@ -7,7 +7,7 @@ const AdmissionProcess = () => {
   const [admissionText, setAdmissionText] = useState("");
 
   const getAdmissionText = async () => {
-    const getText = await axios.get("http://localhost:5000/admissiontext");
+    const getText = await axios.get("/api/admissiontext");
     console.log(getText.data.admissionProcessText);
     setAdmissionText(getText.data.admissionProcessText);
   };
